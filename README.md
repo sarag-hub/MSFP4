@@ -734,7 +734,7 @@ Los valores obtenidos son aproximadamente:
 |---|---:|
 | $C_r$ | $1\ \mu\mathrm{F}$ |
 | $R_e$ | $0.027\ \Omega$ |
-| $R_r$ | $375\ Omega$ |
+| $R_r$ | $375\ \Omega$ |
 | $C_e$ | $483.142\ \mathrm{F}$ |
 
 Estos valores corresponden al cálculo nominal del controlador analógico ideal. Para la implementación con componentes comerciales se consideran las tolerancias y las diferencias entre el comportamiento del controlador ideal y su realización eléctrica.
