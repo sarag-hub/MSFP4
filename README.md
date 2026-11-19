@@ -1,4 +1,4 @@
-[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=carolinagamez/MSFP4)
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=sarag-hub/MSFP4)
 
 # Práctica 4 — Modelado y control del sistema endócrino
 
@@ -12,7 +12,7 @@ El caso de estudio representa el **sistema endócrino** mediante un modelo fenom
 **Institución:** Tecnológico Nacional de México / Instituto Tecnológico de Tijuana  
 **Asignatura:** Modelado de Sistemas Fisiológicos  
 **Programa:** Ingeniería Biomédica  
-**Estudiante:** Carolina Gamez Flores · 23212193 · l23212193@tectijuana.edu.mx
+**Estudiante:** Sara Gutiérrez Hernández · 23212734 · l23212734@tectijuana.edu.mx
 
 **Repositorio de la asignatura:** https://github.com/DrPaulValle/MSF-IBF1020  
 **Sede:** Blvd. Alberto Limón Padilla s/n, Tijuana, C. P. 22454, B. C., México.
@@ -148,9 +148,9 @@ La analogía es de carácter fenomenológico y sus parámetros eléctricos no re
 
 ### Representación biológica del sistema
 
-El diagrama elaborado mediante BioRender relaciona el estímulo fisiológico, los procesos de transporte y almacenamiento hormonal y la respuesta del tejido diana con los elementos del circuito eléctrico equivalente.
+El diagrama elaborado mediante BioRender relaciona el estímulo fisiológico, los procesos de transporte y almacenamiento hormonal y la respuesta del tejido receptro con los elementos del circuito eléctrico equivalente.
 
-![Modelo biológico del sistema endócrino](Biorender_SistemaEndocrino.png)
+![Modelo biológico del sistema endócrino](P4_Biorender.png)
 
 **Figura 1.** Representación del sistema endócrino y su correspondencia con el circuito eléctrico equivalente. Elaboración mediante BioRender.
 
@@ -687,17 +687,17 @@ Los parámetros utilizados en la implementación computacional son:
 
 | Parámetro | Valor |
 |---|---:|
-| Ganancia proporcional $k_P$ | $962.368141439034$ |
-| Ganancia integral $k_I$ | $171510.840008335$ |
-| Ganancia derivativa $k_D$ | $0.179170949090154$ |
-| Coeficiente del filtro $N_f$ | $3678.01770617189$ |
+| Ganancia proporcional $k_P$ | $13903.9649127396$ |
+| Ganancia integral $k_I$ | $35801252.8377626$ |
+| Ganancia derivativa $k_D$ | $0.181178398885028$ |
+| Coeficiente del filtro $N_f$ | $53163.5307000855$ |
 
 Por lo tanto, la función de transferencia del controlador es:
 
 ```math
-K(s)=962.3681414+
-\frac{171510.8400}{s}+
-\frac{0.1791709491(3678.0177062)s}{s+3678.0177062}.
+K(s)=13903.9649127396+
+\frac{35801252.8377626}{s}+
+\frac{0.181178398885028(53163.5307000855)s}{s+53163.5307000855}.
 ```
 
 La acción proporcional modifica la respuesta ante el error, la integral contribuye a eliminar el error de seguimiento en estado estacionario y la derivativa filtrada permite actuar sobre las variaciones rápidas de la señal.
