@@ -733,9 +733,9 @@ Los valores obtenidos son aproximadamente:
 | Componente | Valor calculado |
 |---|---:|
 | $C_r$ | $1\ \mu\mathrm{F}$ |
-| $R_e$ | $5.8305\ \Omega$ |
-| $R_r$ | $5.6112\ \mathrm{k}\Omega$ |
-| $C_e$ | $31.93\ \mu\mathrm{F}$ |
+| $R_e$ | $0.027\ \Omega$ |
+| $R_r$ | $375\ Omega$ |
+| $C_e$ | $483.142\ \mathrm{F}$ |
 
 Estos valores corresponden al cálculo nominal del controlador analógico ideal. Para la implementación con componentes comerciales se consideran las tolerancias y las diferencias entre el comportamiento del controlador ideal y su realización eléctrica.
 
@@ -776,11 +776,11 @@ def endocrino(C,R2):
 Las condiciones se definen mediante:
 
 ```python
-# Control
+# Función de transferencia de control
 C,R2 = 1E-6,100E3
 sysControl,L = endocrino(C,R2)
 
-# Caso
+# Función de transferencia de caso
 C,R2 = 1000E-6,1E3
 sysCaso,L = endocrino(C,R2)
 ```
@@ -792,10 +792,10 @@ Las respuestas se obtienen mediante `forced_response`, utilizando condiciones in
 El controlador se construye considerando las ganancias proporcional, integral y derivativa, así como el coeficiente de filtrado:
 
 ```python
-kP = 962.368141439034
-kI = 171510.840008335
-kD = 0.179170949090154
-Nf = 3678.01770617189
+kP = 13903.9649127396
+kI = 35801252.8377626
+kD = 0.181178398885028
+Nf = 53163.5307000855
 
 numPID = [kP+kD*Nf,kP*Nf+kI,kI*Nf]
 denPID = [1,Nf,0]
@@ -805,7 +805,7 @@ PID = ctrl.tf(numPID,denPID)
 Posteriormente, se construye el sistema controlado mediante retroalimentación negativa:
 
 ```python
-sysPID = ctrl.feedback(ctrl.series(PID,sysCaso),1,sign=-1)
+sysPID = ctrl.feedback(ctrl.series(PID,sys),1,sign=-1)
 ```
 
 La respuesta del individuo sano se utiliza como referencia:
@@ -826,12 +826,12 @@ Este procedimiento permite analizar la reducción de la diferencia entre las res
 
 La representación gráfica considera cuatro señales:
 
-| Señal | Variable | Representación |
+| Señal | Variable | 
 |---|---|---|
-| Entrada aplicada | `u` | Línea continua rosa intenso |
-| Control | `VsControl` | Línea continua rosa claro |
-| Caso | `VsCaso` | Línea continua rojo oscuro |
-| Caso con PID | `VsPID` | Línea punteada violeta |
+| Entrada aplicada | `u` |
+| Control | `VsControl` | 
+| Caso | `VsCaso` |
+| Caso con PID | `VsPID` | 
 
 Las respuestas se representan durante un intervalo de $0$ a $5\ \mathrm{s}$, utilizando las mismas condiciones de entrada y parámetros del modelo.
 
@@ -953,10 +953,10 @@ Las ganancias utilizadas durante la simulación son:
 
 ```math
 \begin{aligned}
-k_P &= 962.3681414,\\
-k_I &= 171510.8400,\\
-k_D &= 0.1791709491,\\
-N_f &= 3678.0177062.
+k_P &= 13903.9649,\\
+k_I &= 35801252.8377,\\
+k_D &= 0.18117,\\
+N_f &= 53163.5307.
 \end{aligned}
 ```
 
@@ -1111,16 +1111,16 @@ La organización de los archivos permite documentar el desarrollo matemático, l
 ├── README.md                         # Reporte y documentación
 ├── CITATION.cff                      # Datos de citación del repositorio
 ├── Análisis.pdf                      # Desarrollo matemático a mano
-├── Gamez23212193.mlx                # Cuaderno computacional MATLAB
-├── Gamez23212193.pdf                # Exportación del cuaderno MATLAB
-├── sistema.slx                       # Modelo Simulink/Simscape
-├── Gamez23212193.py                 # Implementación en Python
+├── P4_Gutierrez23212734.mlx                # Cuaderno computacional MATLAB
+├── P4_Gutierrez23212734.pdf                # Exportación del cuaderno MATLAB
+├── sistema5.slx                       # Modelo Simulink/Simscape
+├── P4_Gutierrez23212734.py                 # Implementación en Python
 ├── Caso_matlab.pdf                   # Respuestas obtenidas en MATLAB
-├── caso_python.pdf                   # Respuestas obtenidas en Python
-├── Biorender_SistemaEndocrino.png    # Diagrama fisiológico
-├── PID.png                           # Evidencia de sintonización PID
-├── Circuito.jpeg                     # Evidencia del circuito
-└── Osciloscopio.bmp                  # Evidencia experimental
+├── Caso_python.pdf                   # Respuestas obtenidas en Python
+├── P4_Biorender.png    # Diagrama fisiológico
+├── P4_PID.png                           # Evidencia de sintonización PID
+├── P4_Circuito.jpeg                     # Evidencia del circuito
+└── P4_Lab.bmp                  # Evidencia experimental
 
 ```
 
