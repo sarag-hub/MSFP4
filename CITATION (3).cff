@@ -1,0 +1,28 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: 'Práctica 4: Sistema endocrino'
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Sara
+    family-names: Gutiérrez Hernández
+    email: l23212734@tijuana.tecnm.mx
+    affiliation: TecNM / IT Tijuana
+repository-code: 'https://github.com/sarag-hub/MSFP4'
+keywords:
+  - sistema endócrino
+  - circuito RLC
+  - secreción hormonal
+  - controlador PID
+  - MATLAB
+  - Simulink
+  - Simscape Electrical
+  - Python
+  - instrumentación electrónica
+license: BSD-2-Clause
+version: '1.0'
+date-released: '2026-11-18'
