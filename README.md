@@ -1110,21 +1110,21 @@ La organización de los archivos permite documentar el desarrollo matemático, l
 .
 ├── README.md                         # Reporte y documentación
 ├── CITATION.cff                      # Datos de citación del repositorio
-├── Análisis.pdf                      # Desarrollo matemático a mano
-├── P4_Gutierrez23212734.mlx                # Cuaderno computacional MATLAB
-├── P4_Gutierrez23212734.pdf                # Exportación del cuaderno MATLAB
-├── sistema5.slx                       # Modelo Simulink/Simscape
-├── P4_Gutierrez23212734.py                 # Implementación en Python
+├── P4_Apuntes.pdf                    # Desarrollo matemático a mano
+├── P4_Gutierrez23212734.mlx          # Cuaderno computacional MATLAB
+├── P4_Gutierrez23212734.pdf          # Exportación del cuaderno MATLAB
+├── sistema5.slx                      # Modelo Simulink/Simscape
+├── P4_Gutierrez23212734.py           # Implementación en Python
 ├── Caso_matlab.pdf                   # Respuestas obtenidas en MATLAB
 ├── Caso_python.pdf                   # Respuestas obtenidas en Python
-├── P4_Biorender.png    # Diagrama fisiológico
-├── P4_PID.png                           # Evidencia de sintonización PID
-├── P4_Circuito.jpeg                     # Evidencia del circuito
-└── P4_Lab.bmp                  # Evidencia experimental
+├── P4_Biorender.png                  # Diagrama fisiológico
+├── P4_PID.png                        # Evidencia de sintonización PID
+├── P4_Circuito.jpeg                  # Evidencia del circuito
+└── P4_Lab.bmp                        # Evidencia experimental
 
 ```
 
-**Criterio de nombres:** los archivos de MATLAB, Simulink, Python y las figuras conservan las denominaciones utilizadas durante la práctica. La evidencia experimental se documenta mediante un archivo `.bmp` del osciloscopio, mientras que la imagen `PID.png` contiene la evidencia de sintonización del controlador.
+**Criterio de nombres:** los archivos de MATLAB, Simulink, Python y las figuras conservan las denominaciones utilizadas durante la práctica. La evidencia experimental se documenta mediante un archivo `.bmp` del osciloscopio, mientras que la imagen `P4_PID.png` contiene la evidencia de sintonización del controlador.
 
 [Volver al contenido](#contenido)
 
@@ -1193,11 +1193,11 @@ La implementación experimental permite registrar las señales de entrada y sali
 | Formulación matemática | Ecuaciones integro-diferenciales y función de transferencia |
 | Análisis del sistema | Cálculo de polos, estabilidad, error estacionario y bosquejo de respuesta |
 | Simulaciones | Modelo de Simulink, funciones de transferencia y circuitos en Simscape Electrical |
-| Sintonización | Ganancias PID, filtro derivativo y evidencia `PID.png` |
+| Sintonización | Ganancias PID, filtro derivativo y evidencia `P4_PID.png` |
 | MATLAB | Cuaderno `.mlx`, exportación `.pdf` y figura comparativa |
 | Python | Código `.py`, funciones de transferencia y figura de resultados |
 | Controlador analógico | Cálculo de componentes y representación eléctrica del controlador |
-| Circuito | Evidencia del circuito `.jpeg` |
+| Circuito | Evidencia del circuito `.png` |
 | Laboratorio | Montaje experimental y una captura del osciloscopio en formato `.bmp` |
 | Verificación cruzada | Comparación de las respuestas computacionales y experimentales |
 | Diagrama biológico | Representación fisiológica mediante BioRender |
